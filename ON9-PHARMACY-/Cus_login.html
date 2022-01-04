@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="A.css">
+
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+    body {
+        background-image: url('home.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<body id="top">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="" width="230" />
+        </div>
+        <div class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="#news">SHOP</a>
+            <a href="#news">CONTACT</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">SIGN IN
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="cus_login.html">Customer</a>
+                    <a href="pha_login.html">Pharmacist</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </br></br>
+
+    <div class="center">
+        <h1>Customer's Login</h1>
+        <form action="" method="post" class="login-form">
+
+            <div class="txt_field">
+                <input name="email" id="email" type="text" class="form-control" placeholder="Email" value="">
+
+            </div></br>
+
+            <div class="txt_field">
+                <input name="password" id="password" type="password" class="form-control" placeholder="Password"
+                    value="">
+
+            </div></br>
+
+            <input type="submit" value="Login">
+            <div class="register_link">
+                </br>
+                <p>Don't have an account? <a href="cus_register.html">Register Here</a>.</p>
+            </div></br></br>
+        </form>
+    </div>
+
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
