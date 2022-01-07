@@ -5,7 +5,7 @@
     <title>Customer's Register</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="A.css">
 
 </head>
@@ -45,42 +45,60 @@
     <div class="center2">
         <h1>Customer's Register</h1>
 
-        <form action="" method="post" class="login-form">
+        <form action="{{route('register-user')}}" method="post" class="login-form">
+            @if(Session::has('success'))
+            <b>
+                <div class="alert alert-success">{{Session::get('success')}}</div>
+            </b>
+            @endif
+
+            @if(Session::has('fail'))
+            <b>
+                <div class="alert alert-danger">{{Session::get('fail')}}</div>
+            </b>
+            @endif
+            @csrf
 
             <div class="grid-container">
                 <div class="txt_field">
-                    <input name="name" id="name" type="text" class="form-control" placeholder="Full Name" value="">
+                    <input name="name" id="name" type="text" class="form-control" placeholder="Full Name" value="{{old('name')}}">
+                    <span class="text-danger"> @error('name') {{$message}} @enderror </span>
 
                 </div>
 
 
                 <div class="txt_field">
-                    <input name="email" id="email" type="text" class="form-control" placeholder="Email" value="">
+                    <input name="email" id="email" type="text" class="form-control" placeholder="Email" value="{{old('email')}}">
+                    <span class="text-danger"> @error('email') {{$message}} @enderror </span>
 
                 </div>
 
 
                 <div class="txt_field">
                     <input name="username" id="username" type="text" class="form-control" placeholder="Username"
-                        value="">
+                        value="{{old('username')}}">
+                    <span class="text-danger"> @error('username') {{$message}} @enderror </span>
 
                 </div>
 
                 <div class="txt_field">
                     <input name="password" id="password" type="password" class="form-control" placeholder="Password"
-                        value="">
+                        value="{{old('password')}}">
+                    <span class="text-danger"> @error('password') {{$message}} @enderror </span>
 
                 </div>
 
                 <div class="txt_field">
-                    <input name="phoneNo" id="phoneNo" type="password" class="form-control" placeholder="Phone Number"
-                        value="">
+                    <input name="phoneNo" id="phoneNo" type="text" class="form-control" placeholder="Phone Number"
+                        value="{{old('phoneNo')}}">
+                    <span class="text-danger"> @error('phoneNo') {{$message}} @enderror </span>
 
                 </div>
 
                 <div class="txt_field">
-                    <input name="address" id="address" type="password" class="form-control" placeholder="Address"
-                        value="">
+                    <input name="address" id="address" type="text" class="form-control" placeholder="Address"
+                        value="{{old('address')}}" >
+                    <span class="text-danger"> @error('address') {{$message}} @enderror </span>
 
                 </div>
 

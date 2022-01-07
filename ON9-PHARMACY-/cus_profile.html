@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Your Profile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Orbitor,business,company,agency,modern,bootstrap4,tech,software">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="A.css">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+    body {
+        background-image: url('home.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+
+<body id="top">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="" width="230" />
+        </div>
+        <div class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="#news">SHOP</a>
+            <a href="#news">CONTACT</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">SIGN IN
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="cus_login.html">Customer</a>
+                    <a href="phar_login.html">Pharmacist</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="center3">
+        <h1>Your Profile</h1>
+
+        <form action="" method="post" class="login-form">
+
+            <div class="grid-container">
+                <div class="txt_field">
+                    <p>Full Name</p>
+                    <input name="name" id="name" type="text" class="form-control"  value="<?php echo $row['fname']; ?>">
+
+                </div>
+
+
+                <div class="txt_field">
+                    <p>Email</p>
+                    <input name="email" id="email" type="text" class="form-control" value="<?php echo $row['email']; ?>">
+
+                </div>
+
+
+                <div class="txt_field">
+                    <p>Username</p>
+                    <input name="username" id="username" type="text" class="form-control"
+                        value="<?php echo $row['username']; ?>">
+
+                </div>
+
+                <div class="txt_field">
+                    <p>Password</p>
+                    <input name="password" id="password" type="password" class="form-control" placeholder="Password"
+                        value="">
+
+                </div>
+
+                <div class="txt_field">
+                    <p>Phone Number</p>
+                    <input name="phoneNo" id="phoneNo" type="text" class="form-control"
+                        value="<?php echo $row['phoneNo']; ?>">
+
+                </div>
+                <div></div>
+                <div class="txt_field">
+                    <p>Address</p>
+                    <input name="address" id="address" type="text" class="form-control" placeholder="Address"
+                        value="<?php echo $row['address']; ?>" class="resizedTextbox">
+
+                </div>
+
+                <div></div><div></div>
+                <input type="submit" id="submit" name="submit" value="Save Update">
+                <div></div>
+            </br>
+            </div>
+        </form>
+    </div>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

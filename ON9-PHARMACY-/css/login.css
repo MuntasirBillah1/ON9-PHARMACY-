@@ -10,6 +10,7 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden;
+    overflow-y: scroll;
 }
 
 .center {
@@ -23,17 +24,73 @@ body {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
+.center2 form {
+    padding: 0 50px;
+    box-sizing: border-box;
+
+}
+
 .center h1 {
     text-align: center;
     padding: 20px 0;
     border-bottom: 1px solid silver;
 }
 
+.center2 {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+
+}
+
+.center2 h1 {
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+
+
 .center form {
     padding: 0 50px;
     box-sizing: border-box;
 }
 
+.center3 {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    
+}
+
+.center3 h1 {
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.center3 form {
+    padding: 0 50px;
+    box-sizing: border-box;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+
+}
 
 input[type="submit"] {
     width: 100%;
@@ -67,6 +124,7 @@ input[type="submit"]:hover {
 
 .signup_link a:hover {
     text-decoration: underline;
+
 }
 
 .login-form {

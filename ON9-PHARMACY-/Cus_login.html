@@ -46,16 +46,27 @@
 
     <div class="center">
         <h1>Customer's Login</h1>
-        <form action="" method="post" class="login-form">
+        <form action="{{route('login-user')}}" method="post" class="login-form">
+            @if(Session::has('success'))
+            <b>
+                <div class="alert alert-success">{{Session::get('success')}}</div>
+            </b>
+            @endif
 
+            @if(Session::has('fail'))
+            <b>
+                <div class="alert alert-danger">{{Session::get('fail')}}</div>
+            </b>
+            @endif
+            @csrf
             <div class="txt_field">
-                <input name="email" id="email" type="text" class="form-control" placeholder="Email" value="">
+                <input name="email" id="email" type="text" class="form-control" placeholder="Email" value="{{old('email')}}">
 
             </div></br>
 
             <div class="txt_field">
                 <input name="password" id="password" type="password" class="form-control" placeholder="Password"
-                    value="">
+                    value="{{old('password')}}">
 
             </div></br>
 
